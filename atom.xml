@@ -6,7 +6,7 @@
   <link href="http://www.hoooo.org/atom.xml" rel="self"/>
   
   <link href="http://www.hoooo.org/"/>
-  <updated>2020-12-29T16:12:53.000Z</updated>
+  <updated>2021-01-30T07:32:26.000Z</updated>
   <id>http://www.hoooo.org/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python tricks</title>
+    <link href="http://www.hoooo.org/2021/01/30/python-tricks/"/>
+    <id>http://www.hoooo.org/2021/01/30/python-tricks/</id>
+    <published>2021-01-30T07:32:26.000Z</published>
+    <updated>2021-01-30T07:32:26.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="python-set&#x64CD;&#x4F5C;">1. Python set&#x64CD;&#x4F5C;</h2><p><code>difference</code> &#x548C; <code>symmetric_difference</code> &#x7684;&#x533A;&#x522B;&#xFF1A;</p><p>&#x5982;&#x679C; <code>a</code> &#x548C; <code>b</code> &#x662F;&#x96C6;&#x5408;&#x7C7B;&#x578B;&#xFF0C;<code>a-b</code>&#x662F;&#x6307;&#x6240;&#x6709;&#x5728;<code>a</code>&#x4F46;&#x4E0D;&#x5728;<code>b</code>&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x3002;</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = {<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>}</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>b = {<span class="number">1</span>, <span class="number">4</span>, <span class="number">5</span>}</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a - b</span><br><span class="line">{<span class="number">2</span>, <span class="number">3</span>}</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>b - a</span><br><span class="line">{<span class="number">4</span>, <span class="number">5</span>}</span><br></pre></td></tr></table></figure><p><code>a.symmetric_difference(b)</code> &#x6216; <code>a &amp; b</code> &#x7684;&#x7ED3;&#x679C;&#x662F;&#x653E;&#x5728;&#x4E00;&#x4E2A;&#x96C6;&#x5408;&#x4E2D;&#xFF0C;&#x662F; <code>a-b</code> &#x548C; <code>b-a</code>&#x7684;&#x5E76;&#x96C6;&#x3002;</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a.symmetric_difference(b)</span><br><span class="line">{<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>}</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>(a - b).union(b - a)</span><br><span class="line">{<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>}</span><br></pre></td></tr></table></figure><p>&#x5224;&#x65AD;&#x5217;&#x8868;&#x4E4B;&#x95F4;&#x7684;&#x5DEE;&#x5F02;&#xFF1A;</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">list1 = [<span class="string">&apos;Scott&apos;</span>, <span class="string">&apos;Eric&apos;</span>, <span class="string">&apos;Kelly&apos;</span>, <span class="string">&apos;Emma&apos;</span>, <span class="string">&apos;Smith&apos;</span>]</span><br><span class="line">list2 = [<span class="string">&apos;Scott&apos;</span>, <span class="string">&apos;Eric&apos;</span>, <span class="string">&apos;Kelly&apos;</span>]</span><br><span class="line">&#x200B;</span><br><span class="line">list3 = list(set(list1) ^ set(list2))</span><br><span class="line">print(list3)</span><br><span class="line">&#x200B;</span><br><span class="line"><span class="comment"># output</span></span><br><span class="line">[<span class="string">&apos;Emma&apos;</span>, <span class="string">&apos;Smith&apos;</span>]</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;python-set&amp;#x64CD;&amp;#x4F5C;&quot;&gt;1. Python set&amp;#x64CD;&amp;#x4F5C;&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;difference&lt;/code&gt; &amp;#x548C; &lt;code&gt;symmetric_difference&lt;/code</summary>
+      
+    
+    
+    
+    <category term="Python" scheme="http://www.hoooo.org/categories/Python/"/>
+    
+    
+    <category term="tricks" scheme="http://www.hoooo.org/tags/tricks/"/>
+    
+  </entry>
   
   <entry>
     <title>Python的LRU Cache</title>
@@ -579,33 +604,6 @@
     <category term="javascript" scheme="http://www.hoooo.org/tags/javascript/"/>
     
     <category term="GPU" scheme="http://www.hoooo.org/tags/GPU/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>pip 安装包指定头文件和静态库目录</title>
-    <link href="http://www.hoooo.org/2018/04/24/pip/"/>
-    <id>http://www.hoooo.org/2018/04/24/pip/</id>
-    <published>2018-04-24T08:09:02.000Z</published>
-    <updated>2018-04-24T08:09:02.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="&#x5F00;&#x53D1;&#x4E2D;&#x9047;&#x5230;&#x7684;&#x95EE;&#x9898;">&#x5F00;&#x53D1;&#x4E2D;&#x9047;&#x5230;&#x7684;&#x95EE;&#x9898;</h2><ol type="1"><li><p><code>pip</code> &#x6307;&#x5B9A;<code>include</code> &#x548C;<code>lib</code> &#x76EE;&#x5F55;</p><p>&#x5728;&#x6307;&#x5B9A;&#x76EE;&#x5F55;&#x65F6;&#x9700;&#x8981;&#x6DFB;&#x52A0;&#x6807;&#x8BC6; <code>build_ext</code>&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p><p><code>sudo pip install --global-option=build_ext --global-option=&quot;-I/usr/local/include/&quot; --global-option=&quot;-L/usr/local/lib&quot;  &lt;you package name&gt;</code></p></li></ol><p><a id="more"></a></p><p>&#x5176;&#x4E2D;<code>-L</code> &#x6307;&#x5B9A; <code>lib</code> &#x6587;&#x4EF6;&#xFF0C;</p><p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">Options for &apos;build_ext&apos; command:</span><br><span class="line">  --build-lib (-b)     directory for compiled extension modules</span><br><span class="line">  --build-temp (-t)    directory for temporary files (build by-products)</span><br><span class="line">  --plat-name (-p)     platform name to cross-compile for, if supported</span><br><span class="line">                       (default: linux-x86_64)</span><br><span class="line">  --inplace (-i)       ignore build-lib and put compiled extensions into the</span><br><span class="line">                       source directory alongside your pure Python modules</span><br><span class="line">  --include-dirs (-I)  list of directories to search for header files</span><br><span class="line">                       (separated by &apos;:&apos;)</span><br><span class="line">  --define (-D)        C preprocessor macros to define</span><br><span class="line">  --undef (-U)         C preprocessor macros to undefine</span><br><span class="line">  --libraries (-l)     external C libraries to link with</span><br><span class="line">  --library-dirs (-L)  directories to search for external C libraries</span><br><span class="line">                       (separated by &apos;:&apos;)</span><br><span class="line">  --rpath (-R)         directories to search for shared C libraries at runtime</span><br><span class="line">  --link-objects (-O)  extra explicit link objects to include in the link</span><br><span class="line">  --debug (-g)         compile/link with debugging information</span><br><span class="line">  --force (-f)         forcibly build everything (ignore file timestamps)</span><br><span class="line">  --compiler (-c)      specify the compiler type</span><br><span class="line">  --swig-cpp           make SWIG create C++ files (default is C)</span><br><span class="line">  --swig-opts          list of SWIG command line options</span><br><span class="line">  --swig               path to the SWIG executable</span><br><span class="line">  --user               add user include, library and rpath</span><br><span class="line">  --help-compiler      list available compilers</span><br></pre></td></tr></table></figure></p><blockquote><p>https://stackoverflow.com/questions/18783390/python-pip-specify-a-library-directory-and-an-include-directory</p></blockquote><ol start="2" type="1"><li><p>&#x57FA;&#x4E8E;Pycharm&#x8FDC;&#x7A0B;&#x8C03;&#x8BD5;</p><blockquote><ul><li>https://blog.csdn.net/zhaihaifei/article/details/53691873</li><li>https://www.xncoding.com/2016/05/26/python/pycharm-remote.html</li></ul></blockquote><p>&#x200B;</p></li></ol>]]></content>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;开发中遇到的问题&quot;&gt;开发中遇到的问题&lt;/h2&gt;
-&lt;ol type=&quot;1&quot;&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;pip&lt;/code&gt; 指定&lt;code&gt;include&lt;/code&gt; 和&lt;code&gt;lib&lt;/code&gt; 目录&lt;/p&gt;
-&lt;p&gt;在指定目录时需要添加标识 &lt;code&gt;build_ext&lt;/code&gt;，例如：&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;sudo pip install --global-option=build_ext --global-option=&quot;-I/usr/local/include/&quot; --global-option=&quot;-L/usr/local/lib&quot;  &amp;lt;you package name&amp;gt;&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;</summary>
-    
-    
-    
-    <category term="Python" scheme="http://www.hoooo.org/categories/Python/"/>
-    
-    
-    <category term="pip" scheme="http://www.hoooo.org/tags/pip/"/>
     
   </entry>
   
